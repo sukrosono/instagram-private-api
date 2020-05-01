@@ -14,7 +14,9 @@
   },
   "homepage": "https://github.com/huttarichard/instagram-private-api",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --inline-diffs --timeout 1000000 tests/run.js"
+    "test": "./node_modules/mocha/bin/mocha --inline-diffs --timeout 1000000 tests/run.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "bluebird": "^3.0.5",
@@ -32,7 +34,8 @@
     "tough-cookie": "^2.3.1",
     "tough-cookie-filestore": "0.0.1",
     "underscore.string": "^3.3.4",
-    "valid-url": "^1.0.9"
+    "valid-url": "^1.0.9",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "faker": "^3.1.0",
@@ -46,5 +49,6 @@
     "should-sinon": "0.0.5",
     "sinon": "^1.17.3",
     "tmp": "0.0.28"
-  }
+  },
+  "snyk": true
 }
